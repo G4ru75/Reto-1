@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProdArt- Productos</title>
+    <title>Motilones- Productos</title>
     <!-- iconos-->
     <link rel="apple-touch-icon" href="assets/img/">
     <!-- css-->
@@ -19,14 +19,14 @@
                 <div class="w-100 d-flex justify-content-between">
                     <div>
                         <i class="fa fa-envelope mx-2"></i>
-                        <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@prodart.com">info@prodart.com</a>
+                        <a class="navbar-sm-brand text-light text-decoration-none" href="motilonesshop@gmail.com">motilonesshop@gmail.com</a>
                         <i class="fa fa-phone mx-2"></i>
                         <a class="navbar-sm-brand text-light text-decoration-none" href="tel: 057-320-202-02-02">057-320-202-02-02</a>
                     </div>
                     <div>
-                        <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
-                        <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
-                        <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                        <a class="text-light" href="https://www.facebook.com/groups/565713253113822" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                        <a class="text-light" href="https://www.instagram.com/shopmotilones1.0?utm_source=qr&igsh=MTRsN2dnY2hxd2s4aA==" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                        <a class="text-light" href="https://x.com/Yesid562877?t=DsgDkMBqABqMgIMSbmYLkA&s=09" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
                     </div>
                 </div>
     
@@ -40,12 +40,12 @@
             </button>
             <div class="container d-flex justify-content-between align-items-center">
                 <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
-                    ProdArt
+                    Motilones
                 </a>
                 <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="opciones">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="acercade.html">A cerca de</a>
@@ -71,7 +71,7 @@
             <div class="row">
                 <div class="col-lg-5 mt-5">
                     <div class="card mb-3">
-                        <img class="card-img img-fluid" src="assets/img/shop_04.jpg">
+                        <img class="card-img img-fluid" src="assets/img/shop_04.jpg" id="main-image">
                     </div>
                     <div class="row">
                         <div class="col-1 align-self-center">
@@ -85,24 +85,29 @@
                                 <div class="carousel-item active">
                                     <div class="row">
                                         <div class="col-4">
-                                            <a href="#">
+                                            <a href="#" onclick="changeImage('assets/img/mochila1.jpg')">
                                                 <img class="card-img img-fluid" src="assets/img/mochila1.jpg">
                                             </a>
                                         </div>
                                         <div class="col-4">
-                                            <a href="#">
+                                            <a href="#" onclick="changeImage('assets/img/mochila2.jpg')">
                                                 <img class="card-img img-fluid" src="assets/img/mochila2.jpg">
                                             </a>
                                         </div>
                                         <div class="col-4">
-                                            <a href="#">
+                                            <a href="#" onclick="changeImage('assets/img/mochila3.jpg')">
                                                 <img class="card-img img-fluid" src="assets/img/mochila3.jpg">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
+                            <script>
+                                function changeImage(imageSrc) {
+                                    // Cambia el src de la imagen principal 
+                                    document.getElementById("main-image").src = imageSrc;
+                                }
+                            </script>
                         </div>
                         <div class="col-1 align-self-center">
                             <a href="#multi-item-example" role="button" data-bs-slide="next">
@@ -115,7 +120,7 @@
                 <div class="col-lg-7 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h1 class="h2">Mochila wayuu azul 6...</h1>
+                            <h1 class="h2">Mochila wayuu</h1>
                             <p class="h3 py-2">$120.000</p>
                             <p class="py-2">
                                 <i class="fa fa-star text-warning"></i>
@@ -127,22 +132,21 @@
                             </p>
 
                             <h6>Descripción:</h6>
-                            <p>Hecho a mano</p>
+                            <p>Mochilas hechas a mano por artesanos Wayuus</p>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
                                     <h6>Color :</h6>
                                 </li>
                                 <li class="list-inline-item">
-                                    <p class="text-muted"><strong>Varios colores / Blanco-negro</strong></p>
+                                    <p class="text-muted"><strong>Coloridos</strong></p>
                                 </li>
                             </ul>
 
                             <h6>Especificacion:</h6>
                             <ul class="list-unstyled pb-3">
-                                <li>Hecho a mano</li>
+                                <li>Hechas a mano por artesanos Wayuu, estas mochilas combinan tradición y estilo moderno. Cada pieza es única, elaborada con colores vibrantes y patrones tradicionales que reflejan la rica cultura Wayuu.</li>
 
                             </ul>
-
                             <form action="" method="GET">
                                 <input type="hidden" name="product-title" value="Activewear">
                                 <div class="row">
@@ -155,72 +159,75 @@
                                             <li class="list-inline-item"><span class="btn btn-success btn-size">M</span></li>
                                             <li class="list-inline-item"><span class="btn btn-success btn-size">L</span></li>
                                         </ul>
-                                    </div>
-                                    <div class="col-auto">
-                                        <ul class="list-inline pb-3">
-                                            <li class="list-inline-item text-right">
-                                                Cantidad
-                                                <input type="hidden" name="product-quanity" id="product-quanity" value="1">
-                                            </li>
-                                            <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
-                                            <li class="list-inline-item"><span class="badge bg-secondary" id="var-value">1</span></li>
-                                            <li class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span></li>
-                                        </ul>
+                                    </div>                                   
+                                    <div class="col-auto">                                       
+                                            <ul class="list-inline pb-3">
+                                                <li class="list-inline-item text-right">
+                                                    Cantidad
+                                                    <input type="hidden" name="product-quanity" id="product-quanity" value="1">
+                                                </li>
+                                                <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
+                                                <li class="list-inline-item"><span class="badge bg-secondary" id="var-value">1</span></li>
+                                                <li class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span></li>
+                                            </ul>
                                     </div>
                                 </div>
-                                <div class="row pb-3">
-                                    <div class="col-lg-6 d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">Comprar</button>
-                                        
-                                    </div>
-                                    <div class="col-lg-6 d-grid">
-                                        <button class="btn btn-success">
-                                            <a href="pago.html" target="target_blank">Pagar</a>
-                                            </button>
-                                    </div>
-                                    
-
-                                </div>
+                                    <div class="row pb-3">
+                                        <center>
+                                            <div class="col-lg-6 d-grid">                                       
+                                                <button class="btn btn-success btn-lg" name="submit" value="buy">
+                                                    <a href="pago.html" style="text-decoration: none; color: aliceblue;">Comprar</a
+                                                </button>                                       
+                                        </div> 
+                                        </center>
+                                    </div>                              
                             </form>
 
                         </div>
+
                     </div>
-                        <!-- paginacion -->
+                    <br>
+         <!-- paginacion -->
             <div class="row">
-                <ul class="pagination pagination-lg justify-content-end">
-                    <li class="page-item">
-                        <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="productos.html">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="productos2.html">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="productos3.html">3</a>
-                    </li>
-                </ul>
+                <nav aria-label="Page navigation example" style="height: 50px;">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="productos2.html">Previous</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="productos.html">1</a></li>
+                      <li class="page-item"><a class="page-link" href="productos2.html">2</a></li>
+                      <li class="page-item"><a class="page-link" href="productos3.html">3</a></li>
+                      <li class="page-item"><a class="page-link" href="productos4.html">4</a></li>
+                      <li class="page-item"><a class="page-link" href="productos5.html">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="productos4.html">Siguiente</a>
+                      </li>
+                    </ul>
+                  </nav>
+
+                  <style> 
+                    .pagination .page-link 
+                    { 
+                        font-size: 1.25rem; 
+                        padding: 10px 20px;
+                    } 
+                  </style>
             </div>
-                    
                 </div>
             </div>
         </div>
     </section>
-
-
     <!-- fin cuerpo-->
-
-
-
-
-        <!-- inicio de pie-->
+    <!-- inicio de pie-->
     <footer class="bg-dark" id="templatemo_footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-success border-bottom pb-3 border-light log">ProdArt</h2>
+                    <h2 class="h2 text-success border-bottom pb-3 border-light log">Motilones</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
-                            Local principal - Bogotá - Colombia
+                            Local principal - Valledupar - Colombia
                         </li>
 
                         <li>
@@ -229,7 +236,7 @@
                         </li>
                         <li>
                             <i class="fa fa-envelope mx-2"></i>
-                            <a class="text-decoration-none" href="mailto:info@prodart.com">info@prodart.com</a>
+                            <a class="text-decoration-none" href="motilonesshop@gmail.com">motilonesshop@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -238,16 +245,14 @@
                     <ul class="list-unstyled text-light footer-link-list">
                         <li><a class="text-decoration-none" href="compras.html">Sombreros</a></li>
                         <li><a class="text-decoration-none" href="compras.html">Hamacas</a></li>
-                        <li><a class="text-decoration-none" href="compras.html">Platería</a></li>
-                        <li><a class="text-decoration-none" href="compras.html">Bolsos</a></li>
-                        <li><a class="text-decoration-none" href="compras.html">Mochilas</a></li>
-                        <li><a class="text-decoration-none" href="compras.html">Tapetes</a></li>
+                        <li><a class="text-decoration-none" href="compras.html">Manillas</a></li>
+                        <li><a class="text-decoration-none" href="compras.html">Bolsos</a></li> 
                     </ul>
                 </div>
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Mas información</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="index.html">Home</a></li>
+                        <li><a class="text-decoration-none" href="index.html">Inicio</a></li>
                         <li><a class="text-decoration-none" href="acercade.html">A cerca de</a></li>
                         <li><a class="text-decoration-none" href="compras.html">Compras</a></li>
                         <li><a class="text-decoration-none" href="productos.html">Productos</a></li>
@@ -263,13 +268,13 @@
                 <div class="col-auto me-auto">
                     <ul class="list-inline text-left footer-icons">
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.facebook.com/groups/565713253113822"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/shopmotilones1.0?utm_source=qr&igsh=MTRsN2dnY2hxd2s4aA=="><i class="fab fa-instagram fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="https://x.com/Yesid562877?t=DsgDkMBqABqMgIMSbmYLkA&s=09"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
                         </li>
                         
                     </ul>
@@ -278,8 +283,17 @@
                     <label class="sr-only" for="subscribeEmail">Escriba su Email</label>
                     <div class="input-group mb-2">
                         <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
-                        <div class="input-group-text btn-success text-light">Subscribirse</div>
+                        <div class="input-group-text btn-success text-light" id="subscribeButton">Subscribirse</div>
                     </div>
+                    <style>
+                        #subscribeButton {
+                            transition: all 0.3s ease-in-out;
+                        }
+                    
+                        #subscribeButton:hover {
+                            box-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00, 0 0 35px #00ff00; 
+                        }
+                    </style>  
                 </div>
             </div>
 
@@ -289,7 +303,7 @@
             <div class="container">
                 <div class="row pt-2">
                     <p class="text-left text-light">
-                        Copyright &copy; 2024 - ProdArt | Diseñado por: Pablo Carr
+                        Copyright &copy; 2024 - Motilones | Diseñado por: talent shop
                     </p>
                 </div>
             </div>
