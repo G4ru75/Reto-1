@@ -9,36 +9,210 @@
         <link rel="stylesheet" href="assets/css/templatemo.css">
         <link rel="stylesheet" href="assets/css/custom.css">
         <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-<style>
-    .payment-form{
-        max-width: 400px;
-        margin: auto;
-        padding: 20px;
-        background-color: rgb(231, 232, 232);
-        border-radius: 8px;
-        box-shadow: 0 2px 10pc rgba(0, 0, 0, 0.1);
-    }
-</style>
-
+        <link rel="stylesheet" href="assets/css/estilo.css">
 </head>
+
 <body>
-    <div class="payment-form">
-        <h1 class="h4 mb-4 text-center">Datos de Pago</h1>
-        <form id="payment-form">
-            <div class="form-group">
-                <label for="card-number">Número de Tarjeta</label>
-                <input type="text" class="form-control" id="card-number" placeholder="1234 5678 9012 3456" required>
+            <!-- inicio encabezado-->
+            <nav class="navbar navbar-expand-lg bg-dark navbar-light" id="templatemo_nav_top">
+                <div class="container text-light">
+                    <div class="w-100 d-flex justify-content-between">
+                        <div>
+                            <i class="fa fa-envelope mx-2"></i>
+                            <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@prodart.com">shopmotilones@gmail.com</a>
+                            <i class="fa fa-phone mx-2"></i>
+                            <a class="navbar-sm-brand text-light text-decoration-none" href="tel: 057-320-202-02-02">3007469793</a>
+                        </div>
+                        <div>
+                            <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                            <a class="text-light" href="https://www.instagram.com/shopmotilones1.0?igsh=MTRsN2dnY2hxd2s4aA==" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                            <a class="text-light" href="https://x.com/Yesid562877?t=Q8Vce-TbyBd68AoVGQ3lNg&s=09" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                        </div>
+                    </div>
+        
+                </div>
+            </nav>
+                <!-- fin encabezado-->
+         <!-- inicio menu-->
+         <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#opciones">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container d-flex justify-content-between align-items-center">
+                <a class="navbar-brand logo h1 align-self-center" href="index.html" style="color: rgb(165, 109, 5);">
+                <b>Shop Motilones</b>
+                </a>
+                <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="opciones">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="acercade.html">A cerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="compras.html">Compras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="expiry-date">Fecha de expiración (MM/AA)</label>
-                <input type="text" class="form-control" id="expiry-date" placeholder="MM/AA" required>
+    
+         </nav>
+    <!-- fin menu-->
+    
+<!-- Contenedor del Formulario -->
+<div class="container" id="form-container" style="padding: 150px;">
+    <h1 style="text-align: center;"><b>Registro de Pago</b></h1>
+    <fieldset>
+        <legend>Contacto</legend>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Escriba su nombre" minlength="4" maxlength="50" pattern="[A-Za-z\s]+">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Escriba su email">
+    </fieldset>
+    <fieldset>
+        <legend>Método de Pago</legend>
+        <label for="metodo-pago">Método de Pago:</label>
+        <select id="metodo-pago" name="metodo-pago" required onchange="mostrarFormularioPago()">
+            <option value="">Seleccione un método de pago</option>
+            <option value="tarjeta-credito">
+                <img src="assets/img/mastercard.png" alt="Tarjeta de Crédito" style="width: 20px; height: 20px;"> Tarjeta de Crédito
+            </option>
+            <option value="transferencia-bancaria">
+                <img src="assets/img/daviplata.jpg" alt="Transferencia Bancaria" style="width: 20px; height: 20px;"> Transferencia Bancaria
+            </option>
+            <option value="paypal">
+                <img src="assets/img/paypal.jpg" alt="PayPal" style="width: 20px; height: 20px;"> PayPal
+            </option>
+        </select>
+    </fieldset>
+    <input type="submit" value="Pagar">
+</div>
+
+    
+        <!-- Formulario de Pago -->
+        <div class="payment-form" id="payment-form" style="display: none;">
+            <h1 class="h4 mb-4 text-center">Datos de Pago</h1>
+            <form>
+                <div class="form-group">
+                    <label for="card-number">Número de Tarjeta</label>
+                    <input type="text" class="form-control" id="card-number" placeholder="1234 5678 9012 3456" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry-date">Fecha de expiración (MM/AA)</label>
+                    <input type="text" class="form-control" id="expiry-date" placeholder="MM/AA" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvc">CVC</label>
+                    <input type="text" class="form-control" id="cvc" placeholder="123" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Pagar</button>
+            </form>
+        </div>
+    
+        <script>
+            function mostrarFormularioPago() {
+                var metodoPago = document.getElementById("metodo-pago").value;
+                var formularioPago = document.getElementById("payment-form");
+                if (metodoPago === "tarjeta-credito") {
+                    formularioPago.style.display = "block";
+                } else {
+                    formularioPago.style.display = "none";
+                }
+            }
+        </script>
+ <!-- inicio de pie-->
+ <footer class="bg-dark" id="templatemo_footer" style="bottom: 0; width: 100%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 border-bottom text-light pb-3 border-light log">Shop Motilones</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt fa-fw"></i>
+                        Local principal - Valledupar - Colombia
+                    </li>
+
+                    <li>
+                        <i class="fa fa-phone fa-fw"></i>
+                        <a class="text-decoration-none" href="tel: 057-320-202-02-02">3007469793</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope mx-2"></i>
+                        <a class="text-decoration-none" href="mailto:info@prodart.com">shopmotilones@gmail.com</a>
+                    </li>
+                </ul>
             </div>
-            <div class="form-group">
-                <label for="cvc">CVC</label>
-                <input type="text" class="form-control" id="cvc" placeholder="123" required>
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">Productos</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="compras.html">Sombreros</a></li>
+                    <li><a class="text-decoration-none" href="compras.html">Hamacas</a></li>
+                    <li><a class="text-decoration-none" href="compras.html">Mochilas</a></li>
+                    <li><a class="text-decoration-none" href="compras.html">Manillas</a></li>
+                </ul>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Pagar</button>
-        </form>
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">Mas información</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="index.html">Home</a></li>
+                    <li><a class="text-decoration-none" href="acercade.html">A cerca de</a></li>
+                    <li><a class="text-decoration-none" href="compras.html">Compras</a></li>
+                    <li><a class="text-decoration-none" href="productos.html">Productos</a></li>
+                    <li><a class="text-decoration-none" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row text-light mb-4">
+            <div class="col-12 mb-3">
+                <div class="w-100 my-3 border-top border-light"></div>
+            </div>
+            <div class="col-auto me-auto">
+                <ul class="list-inline text-left footer-icons">
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/shopmotilones1.0?igsh=MTRsN2dnY2hxd2s4aA=="><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://x.com/Yesid562877?t=Q8Vce-TbyBd68AoVGQ3lNg&s=09"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
     </div>
+    <div class="w-100 bg-black py-3">
+        <div class="container">
+            <div class="row pt-2">
+                <p class="text-left text-light">
+                    Copyright &copy; 2024 - Shop Motilones | Diseñado por: Talent Shop
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- fin de pie-->
+        </footer>
+    <script src="DN.js"></script>
+    <script>
+        function mostrarFormularioPago() {
+            var metodoPago = document.getElementById("metodo-pago").value;
+            var formularioPago = document.getElementById("payment-form");
+            if (metodoPago === "tarjeta-credito") {
+                formularioPago.style.display = "block";
+            } else {
+                formularioPago.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
