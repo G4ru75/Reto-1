@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             precio: 250000,
             imagen: "assets/img/feature_prod_01.jpg",
             categoria: "sombreros",
+            archivo: "productos.html"
         },
         {
             id: 2,
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             precio: 150000,
             imagen: "assets/img/sombrero4.jpg",
             categoria: "sombreros",
+            archivo: "productos.html"
         },
         {
             id: 3,
@@ -23,13 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
             precio: 250000,
             imagen: "assets/img/feature_prod_02.jpg",
             categoria: "sombreros",
+            archivo: "productos.html"
         },
         {
             id: 4,
             nombre: "Mochila wayuu azul 6",
             precio: 120000,
             imagen: "assets/img/shop_04.jpg",
-            categoria: "mochilas",
+            categoria: "Mochila",
+            archivo: "productos3.html"
         },
         {
             id: 5,
@@ -37,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             precio: 120000,
             imagen: "assets/img/shop_03.jpg",
             categoria: "bolsos",
+            archivo: "productos2.html"
         },
         {
             id: 6,
@@ -44,13 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
             precio: 120000,
             imagen: "assets/img/hamaca1.jpg",
             categoria: "hamacas",
+            archivo: "productos5.html"
         },
         {
             id: 7,
             nombre: "Manilla",
-            precio: 120000,
+            precio: 20000,
             imagen: "assets/img/Manilla.jpeg",
             categoria: "Manilla",
+            archivo: "productos4.html"
         },
         {
             id: 8,
@@ -58,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             precio: 120000,
             imagen: "assets/img/mochila3.jpg",
             categoria: "Mochila",
+            archivo: "productos3.html"
         },
         {
             id: 8,
@@ -65,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             precio: 120000,
             imagen: "assets/img/mochila12.png",
             categoria: "Mochila",
+            archivo: "productos3.html"
         },
     
 
@@ -124,6 +133,12 @@ document.addEventListener("DOMContentLoaded", () => {
             miNodoImagen.classList.add("card-img-top");
             miNodoImagen.setAttribute("src", info.imagen);
             miNodoImagen.setAttribute("alt", info.nombre);
+            miNodoImagen.style.cursor = "pointer";
+
+            // Evento para redirigir a la página del producto
+            miNodoImagen.addEventListener("click", () => {
+                window.location.href = info.archivo;
+            });
 
             const miNodoCardBody = document.createElement("div");
             miNodoCardBody.classList.add("card-body", "d-flex", "flex-column");
