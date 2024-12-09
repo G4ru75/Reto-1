@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
             nombre: "Mochila wayuu azul 6",
             precio: 120000,
             imagen: "assets/img/shop_04.jpg",
-            categoria: "mochilas",
+            categoria: "Mochila",
         },
         {
             id: 5,
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             id: 7,
             nombre: "Manilla",
-            precio: 120000,
+            precio: 20000,
             imagen: "assets/img/Manilla.jpeg",
             categoria: "Manilla",
         },
